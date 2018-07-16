@@ -4,6 +4,7 @@ yum update -y
 yum install -y httpd php
 service httpd start
 chkconfig httpd on
+groupadd www
 usermod -a -G www ec2-user
 chown -R root:www /var/www
 chmod 2775 /var/www
